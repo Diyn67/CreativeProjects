@@ -1,14 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>Writing Archives</h1>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Writing Archive</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
-    <nav> 
+
+    <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="writing.html">Writing</a></li>
@@ -16,6 +16,42 @@
             <li><a href="characters.html">Characters</a></li>
         </ul>
     </nav>
+
+    <header>
+        <h1>Writing Archive</h1>
+        <p>Select a story to read more.</p>
+    </header>
+
+    <section class="story-grid">
+        <div class="story-card" onclick="toggleStoryPopup('story1')">
+            <img src="images/story1-cover.jpg" alt="Story Title">
+            <h3>Story Title</h3>
+        </div>
+        <div class="story-card" onclick="toggleStoryPopup('story2')">
+            <img src="images/story2-cover.jpg" alt="Story Title">
+            <h3>Story Title</h3>
+        </div>
+    </section>
+
+    <div id="story1" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="toggleStoryPopup('story1')">&times;</span>
+            <h2>Story Title</h2>
+            <p>Short description of the story.</p>
+            <a href="stories/story1.pdf">Read More</a>
+        </div>
+    </div>
+
+    <div id="story2" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="toggleStoryPopup('story2')">&times;</span>
+            <h2>Story Title</h2>
+            <p>Short description of the story.</p>
+            <a href="stories/story2.pdf">Read More</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 
 </body>
 </html>
