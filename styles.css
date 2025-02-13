@@ -6,6 +6,15 @@ body {
     margin: 0;
     padding: 0;
 }
+.content a {
+    color: #6fbaff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
 
 /* Navigation */
 nav {
