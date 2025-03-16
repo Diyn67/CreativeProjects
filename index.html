@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Arch Linux Terminal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="writing.html">Writing</a></li>
-            <li><a href="artwork.html">Artwork</a></li>
-            <li><a href="characters.html">Characters</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>Welcome to the Archive</h1>
-        <p>A comprehensive database of creative works, characters, and artistic pieces.</p>
-    </header>
-    
-    <section class="content">
-        <h2>Recent Updates</h2>
-        <ul>
-            <li><strong>Feb 12, 2025:</strong> Chapter 3 uploaded for Murder Mystery 
-                <a href="stories/KnivesOut.pdf">Read Now</a></li>
-            <li><strong>Feb 12, 2025:</strong> The Vault has been added 
-                <a href="_blank">Good Luck</a></li>
-            <!-- <li><strong>Jan 20, 2025:</strong> New illustrations added in <a href="artwork.html">Artwork</a></li> -->
-        </ul>
-    </section>
+
+    <!-- Arch Linux Terminal -->
+    <div id="terminal">
+        <pre id="terminal-output">
+ _        _     _      _       _      
+| |      (_)   | |    (_)     (_)     
+| |       _  __| |     _ _ __  _  ___ 
+| |      | |/ _` |    | | '_ \| |/ _ \
+| |____  | | (_| |_   | | | | | |  __/
+|______| |_|\__,_(_)  |_|_| |_|_|\___|
+
+Arch Linux Console - Type 'help' for commands
+----------------------------------------------------
+        </pre>
+        <div id="input-line">
+            <span class="user">@user</span>:<span class="dir">~</span>$ 
+            <input type="text" id="terminal-input" autofocus onkeydown="handleCommand(event)">
+        </div>
