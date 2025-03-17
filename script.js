@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const fileSystem = {
     "home": ["artwork", "characters", "writing"],
-    "artwork": ["image1.png", "image2.png"],
-    "characters": ["char1.txt", "char2.txt"],
-    "writing": ["story1.txt", "story2.txt"],
+    "artwork": ["", ""],
+    "characters": ["", ""],
+    "writing": ["t", ""],
 };
 
 let currentDirectory = "home";
