@@ -25,7 +25,7 @@ let currentDirectory = "home";
 function handleCommand(event) {
     console.log(` Key Pressed: ${event.key}`); // Debugging
 
-    if (event.key === "Enter" || event.keyCode === 13) { // ✅ Fix Enter key issue
+    if (event.key === "Enter" || event.keyCode === 13) { // Fix Enter key issue
         event.preventDefault(); // Prevent accidental form submission
 
         const inputElement = document.getElementById("terminal-input");
