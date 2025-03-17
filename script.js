@@ -17,7 +17,7 @@ const fileSystem = {
     "home": ["artwork", "characters", "writing"],
     "artwork": ["", ""],
     "characters": ["", ""],
-    "writing": ["t", ""],
+    "writing": ["", ""],
 };
 
 let currentDirectory = "home";
