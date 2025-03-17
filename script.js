@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("✅ DOM fully loaded. Attaching event listeners...");
+    console.log(" DOM fully loaded. Attaching event listeners...");
 
     const inputElement = document.getElementById("terminal-input");
     const outputElement = document.getElementById("terminal-output");
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputElement.focus();
 
     document.getElementById("terminal").addEventListener("click", function () {
-        console.log("📌 Terminal clicked. Refocusing input.");
+        console.log(" Terminal clicked. Refocusing input.");
         inputElement.focus();
     });
 });
@@ -23,7 +23,7 @@ const fileSystem = {
 let currentDirectory = "home";
 
 function handleCommand(event) {
-    console.log(`📝 Key Pressed: ${event.key}`); // Debugging
+    console.log(` Key Pressed: ${event.key}`); // Debugging
 
     if (event.key === "Enter" || event.keyCode === 13) { // ✅ Fix Enter key issue
         event.preventDefault(); // Prevent accidental form submission
@@ -32,7 +32,7 @@ function handleCommand(event) {
         const outputElement = document.getElementById("terminal-output");
 
         const command = inputElement.value.trim();
-        console.log(`🔍 Command Entered: ${command}`); // Debugging
+        console.log(` Command Entered: ${command}`); // Debugging
 
         inputElement.value = ""; // Clear input after submission
 
@@ -45,7 +45,7 @@ function handleCommand(event) {
 }
 
 function processCommand(command) {
-    console.log(`⚡ Processing Command: ${command}`); // Debugging
+    console.log(` Processing Command: ${command}`); // Debugging
 
     const outputElement = document.getElementById("terminal-output");
     const args = command.split(" ");
@@ -53,23 +53,23 @@ function processCommand(command) {
 
     switch (cmd) {
         case "ls":
-            console.log("📂 Executing 'ls' command...");
+            console.log(" Executing 'ls' command...");
             listFiles();
             break;
         case "cd":
-            console.log("📁 Executing 'cd' command...");
+            console.log(" Executing 'cd' command...");
             changeDirectory(args[1]);
             break;
         case "cat":
-            console.log("📜 Executing 'cat' command...");
+            console.log(" Executing 'cat' command...");
             readFile(args[1]);
             break;
         case "clear":
-            console.log("🧹 Clearing terminal...");
+            console.log(" Clearing terminal...");
             outputElement.innerHTML = "";
             break;
         case "help":
-            console.log("📖 Showing help menu...");
+            console.log(" Showing help menu...");
             showHelp();
             break;
         case "whoami":
@@ -79,7 +79,7 @@ function processCommand(command) {
             outputElement.innerHTML += "Arch Linux x86_64 - Custom Web Console\n";
             break;
         default:
-            console.log(`❌ Command not found: '${cmd}'`);
+            console.log(` Command not found: '${cmd}'`);
             outputElement.innerHTML += `Command not found: ${cmd}. Try 'help'.\n`;
     }
 
