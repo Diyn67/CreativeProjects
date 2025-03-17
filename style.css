@@ -10,7 +10,7 @@ body {
 #terminal {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -23,6 +23,7 @@ pre {
 
 #input-line {
     display: flex;
+    align-items: center;
 }
 
 .user {
@@ -41,4 +42,10 @@ input {
     font-size: 16px;
     outline: none;
     width: 80%;
+    caret-color: lightgreen;
+}
+
+/* Ensures input stays focused */
+input:focus {
+    outline: none;
 }
