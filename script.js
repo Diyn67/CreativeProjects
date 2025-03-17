@@ -135,12 +135,17 @@ function showHelp() {
     const outputElement = document.getElementById("terminal-output");
 
     outputElement.innerHTML += `
+<pre>
 Available commands:
-- ls            List files in directory
-- cd <dir>      Change directory
-- cat <file>    Display file content
-- whoami        Show current user
-- arch          Display Arch Linux version
-- clear         Clear the terminal
-- help          Show this help menu\n`;
+- ls       List files in directory
+- cd       Change directory
+- cat      Display file content
+- whoami   Show current user
+- arch     Display Arch Linux version
+- clear    Clear the terminal
+- help     Show this help menu
+</pre>\n`;
+
+    // Scrolls terminal output to bottom automatically
+    outputElement.scrollTop = outputElement.scrollHeight;
 }
